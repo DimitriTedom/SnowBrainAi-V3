@@ -3,7 +3,7 @@ import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Snowdev NextJs Template",
+    default: "SnowBrain Ai v3",
     template: "%s | Snowdev NextJs Template",
   },
   description:
