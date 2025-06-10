@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`font-nexa`}
+        className={`font-nexa text-prima`}
       >
         <ThemeProvider attribute={"class"} defaultTheme="system" enableSystem>
         {children}

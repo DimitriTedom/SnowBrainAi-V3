@@ -9,11 +9,12 @@ const JobSidebarList = () => {
    const pathname = usePathname();
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Job List
         <SidebarGroupLabel className="text-white/80 mt-0">
-          <SidebarMenu className="min-h-[350px] max-h-[350px] overflow-y-auto mb-2 scrollbar">
+        Job List
+        </SidebarGroupLabel>
+          <SidebarMenu className="min-h-[350px] max-h-[350px] overflow-y-auto pb-2 scrollbar">
             <SidebarMenuItem>
-              <SidebarMenuButton className={cn(`*:!bg-transparent !text-white hover:!bg-gray-700 transition-colors `, pathname == "" && "!bg-gray-700")} asChild>
+              <SidebarMenuButton className={cn(`!bg-transparent !text-white hover:!bg-gray-700 transition-colors `, pathname == "" && "!bg-gray-700")} asChild>
                 <Link href="#" className="text-white">
                   <MessageSquareTextIcon className="w-4 h-4"/>
                   <span>Software Developer</span>
@@ -21,8 +22,6 @@ const JobSidebarList = () => {
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
-        </SidebarGroupLabel>
-      </SidebarGroupLabel>
     </SidebarGroup>
   )
 }

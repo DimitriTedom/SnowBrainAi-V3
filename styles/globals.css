@@ -150,6 +150,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-nexa p-0 m-0;
+    @apply bg-background text-prima font-nexa p-0 m-0;
   }
 }
