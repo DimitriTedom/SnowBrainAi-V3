@@ -25,8 +25,9 @@ const AppSidebar = () => {
           <SidebarTrigger className="!p-0" />
         </SidebarHeader>
         <SidebarContent className="overflow-hidden bg-gray-100 dark:bg-black text-prima">
-          <SidebarGroup>
-            <Link href={"/"} className="text-prima">
+          <SidebarGroup className="flex-center flex-col">
+            <Image alt="Snowbrain" src={"/snow5-removebg-preview.png"} width={200} height={200}/>
+            <Link href={"/"} className="text-prima w-full">
               <Button
                 variant={"outline"}
                 className="w-full !bg-transparent border border-secon !text-prima mt-3 h-10 !rounded-lg font-medium text-sm hover:!bg-secon transition-colors"

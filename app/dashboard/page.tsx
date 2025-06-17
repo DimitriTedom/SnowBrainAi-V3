@@ -1,7 +1,6 @@
 "use client";
 import ThemeTrigger from "@/components/ThemeTrigger";
 import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import JobInfoForm from "./_components/JobInfoForm";
@@ -13,18 +12,25 @@ const DashBoard = () => {
       <div className="w-full flex items-center justify-between pt-4">
         <div className="flex items-center">
           {(!open || isMobile) && <SidebarTrigger />}
-          <Link href={"/"} className="text-xl pl-2">
-            <div className="text-xl xl:text-2xl gradient_text flex items-center font-bold">
-              <Image src={"/heart.svg"} alt="heart" width={40} height={40} />
-              <div className="flex">
-                SnowBrain Ai <h6 className="text-xs">v3</h6>
-              </div>
-            </div>
-          </Link>
         </div>
         <ThemeTrigger />
       </div>
-      <JobInfoForm/>
+      <div className="w-full flex-col flex-center gap-[3rem]">
+        <div className="flex flex-col flex-start text-2xl font-bold xl:text-[3rem] space-y-4">
+          <div className="flex-center">
+          <h1>Hey,this is{" "}</h1>
+          <Link href={"/"} className="text-xl pl-2">
+            <div className="text-2xl xl:text-[3rem] gradient_text flex items-center font-bold">
+              <div className="flex leading-[3rem]">
+                <h1 className="">SnowBrain Ai</h1> <h6 className="text-xs xl:text-sm">v3</h6> 👋️
+              </div>
+            </div>
+          </Link>
+          </div>
+          <h1>How can i Help You ?</h1>
+        </div>
+        <JobInfoForm />
+      </div>
     </div>
   );
 };

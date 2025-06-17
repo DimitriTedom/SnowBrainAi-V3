@@ -51,8 +51,8 @@ const SidebarFooterContent = ({
                         </AvatarFallback>
                     </Avatar>
                     <div className="flex-1">
-                        <p className="text-prima font-medium">{userName}</p>
-                        <p className="text-muted-foreground text-xs">{userEmail}</p>
+                        <p className="text-prima font-medium hover:text-white">{userName}</p>
+                        <p className="text-muted-foreground text-xs hover:text-gray-100">{userEmail}</p>
                     </div>
                 </div>
             </PopoverTrigger>
