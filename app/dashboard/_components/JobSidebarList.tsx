@@ -8,14 +8,14 @@ import { usePathname } from "next/navigation"
 const JobSidebarList = () => {
    const pathname = usePathname();
   return (
-    <SidebarGroup>
-        <SidebarGroupLabel className="text-white/80 mt-0">
+    <SidebarGroup className="text-prima">
+        <SidebarGroupLabel className="mt-0">
         Job List
         </SidebarGroupLabel>
           <SidebarMenu className="min-h-[350px] max-h-[350px] overflow-y-auto pb-2 scrollbar">
             <SidebarMenuItem>
-              <SidebarMenuButton className={cn(`!bg-transparent !text-white hover:!bg-gray-700 transition-colors `, pathname == "" && "!bg-gray-700")} asChild>
-                <Link href="#" className="text-white">
+              <SidebarMenuButton className={cn(`!bg-transparent hover:!bg-tertiar transition-colors `, pathname == "" && "!bg-tertiar")} asChild>
+                <Link href="#" className="">
                   <MessageSquareTextIcon className="w-4 h-4"/>
                   <span>Software Developer</span>
                 </Link>

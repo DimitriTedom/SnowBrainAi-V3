@@ -34,7 +34,7 @@ const SidebarFooterContent = ({
                 {loadingCredit ? (<Loader/>) : `Credits Balance: ${credits?.toFixed(1)}`}
             </h3>
             <p className="text-white/80 text-xs mb-2">Unlock premium features</p>
-            <Button type="button" onClick={onUpgradeClick} className="w-full bg-white text-prima font-semibold hover:bg-white/90 text-sm">
+            <Button type="button" onClick={onUpgradeClick} className="w-full bg-white text-black font-semibold hover:bg-white/90 text-sm">
             <Sparkles/>
             Buy Credits
             </Button>
@@ -44,24 +44,24 @@ const SidebarFooterContent = ({
     {isSignedIn && (
         <Popover>
             <PopoverTrigger asChild>
-                <div role="button" className="flex border items-center gap-3 p-2 rounded-lg hover:bg-[rgba(255,255,255,0.05)] transition-colors">
+                <div role="button" className="flex border border-tertiar items-center gap-3 p-2 rounded-lg hover:bg-tertiar transition-colors">
                     <Avatar className="h-8 w-8">
-                        <AvatarFallback className="bg-gray-300 text-prima border">
+                        <AvatarFallback className="bg-gray-300 dark:bg-black text-prima border">
                             {userInitial}
                         </AvatarFallback>
                     </Avatar>
                     <div className="flex-1">
-                        <p className="text-white font-medium">{userName}</p>
+                        <p className="text-prima font-medium">{userName}</p>
                         <p className="text-muted-foreground text-xs">{userEmail}</p>
                     </div>
                 </div>
             </PopoverTrigger>
-            <PopoverContent side="top" align="end" className="w-64 px-4 pt-5 pb-2 bg-[rgb(40,40,40)] !text-white border-gray-600 border">
+            <PopoverContent side="top" align="end" className="w-64 px-4 pt-5 pb-2 bg-gray-100 dark:bg-black text-prima border-tertiar border">
                 <div className="space-y-2">
-                    <h4 className="font-semibold leading-none text-sm !pl-1 mb-1">
+                    <h4 className="font-semibold leading-none text-sm pl-1 mb-1">
                         Account
                     </h4>
-                    <Button variant={"ghost"} className="w-full justify-normal text-sm pl-1 ring-0">
+                    <Button variant={"ghost"} className="w-full justify-normal border border-tertiar hover:bg-tertiar text-sm pl-1 ring-0">
                         <LogOutIcon className="w-4 h-4"/>Sign Out
                     </Button>
                 </div>

@@ -17,19 +17,19 @@ import Image from "next/image";
 const AppSidebar = () => {
   return (
     <>
-      <Sidebar className="!bg-[rgb(33,33,33)] px-2">
-        <SidebarHeader className="flex-between flex-row m-[4px_0px_0px]">
-          <Link href={"/"} className="text-white text-xl">
+      <Sidebar className="px-2 bg-gray-100 dark:bg-black text-prima">
+        <SidebarHeader className="flex-between flex-row m-[4px_0px_0px] bg-gray-100 dark:bg-black">
+          <Link href={"/"}>
             <Image src={"/heart.svg"} alt="heart" width={40} height={40}/>
           </Link>
-          <SidebarTrigger className="!text-white !p-0" />
+          <SidebarTrigger className="!p-0" />
         </SidebarHeader>
-        <SidebarContent className="overflow-hidden">
+        <SidebarContent className="overflow-hidden bg-gray-100 dark:bg-black text-prima">
           <SidebarGroup>
-            <Link href={"/"}>
+            <Link href={"/"} className="text-prima">
               <Button
                 variant={"outline"}
-                className="w-full !bg-transparent !text-white border border-[rgba(243,241,241,0.2)] mt-3 h-10 !rounded-lg font-medium text-sm hover:!bg-gray-700 transition-colors"
+                className="w-full !bg-transparent border border-secon !text-prima mt-3 h-10 !rounded-lg font-medium text-sm hover:!bg-secon transition-colors"
               >
                 <FilePen className="w-4 h-4" />
                 <span>Job</span>
@@ -41,7 +41,7 @@ const AppSidebar = () => {
 
         </SidebarContent>
 
-        <SidebarFooter>
+        <SidebarFooter className="overflow-hidden bg-gray-100 dark:bg-black">
 
           <SidebarFooterContent
             isSignedIn={true}

@@ -1,26 +1,33 @@
-
 import { TrendingUp } from "lucide-react";
 import ThemeTrigger from "./ThemeTrigger";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
     <>
-      <nav className="flex flex-between px-[2rem] xl:p-[20rem] py-4 bg-white dark:bg-gray-900 shadow-sm">
+      <nav className="flex flex-between px-[2rem] xl:px-[5rem] py-4 shadow-sm">
         {/* Logo */}
-        <div className="text-xl font-bold text-gray-800 dark:text-white">
-          SnowDev
-        </div>
+        <Link href={"/"} className="text-white text-xl">
+          <div className="text-xl xl:text-2xl gradient_text flex items-center font-bold">
+            <Image src={"/heart.svg"} alt="heart" width={40} height={40} />
+            <div className="flex">
+              SnowBrain Ai <h6 className="text-xs">v3</h6>
+            </div>
+          </div>
+        </Link>
 
         <div className="flex items-center space-x-4">
           {/* Theme Toggle Button */}
-          <ThemeTrigger/>
+          <ThemeTrigger />
           {/* Get Started Button */}
-          <button
+          <Button
             onClick={() => {}}
-            className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="px-4 flex py-3 rounded-full text-sm font-bold hover:-translate-y-1 transition"
           >
-            Try SnowBrain <TrendingUp />
-          </button>
+            <h2>Try SnowBrain</h2> <TrendingUp />
+          </Button>
         </div>
       </nav>
     </>
