@@ -15,6 +15,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.22.0",
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.14",
@@ -33,6 +34,7 @@
     "motion": "^12.16.0",
     "next": "15.3.3",
     "next-themes": "^0.4.6",
+    "nuqs": "^2.4.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.57.0",

@@ -1,24 +1,29 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import {
+  ClerkProvider,
+  // SignInButton,
+  // SignUpButton,
+  // SignedIn,
+  // SignedOut,
+  // UserButton,
+} from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: {
     default: "SnowBrain Ai v3",
     template: "%s | Snowdev NextJs Template",
   },
-  description:
-    "",
-  keywords: [
-    "snowdev",
-    "template"
-  ],
+  description: "",
+  keywords: ["snowdev", "template"],
   authors: [{ name: "Dimitri Tedom", url: "https://github.com/DimitriTedom" }],
   metadataBase: new URL("https://snow-dev-portfolio-mu.vercel.app/"),
   openGraph: {
     title: "Snowdev NextJs Template",
-    description:
-      "",
+    description: "",
     url: "https://snow-dev-portfolio-mu.vercel.app/",
     siteName: "Snowdev NextJs Template",
     images: [
@@ -37,8 +42,7 @@ export const metadata: Metadata = {
     site: "@DimitriTedom",
     creator: "@DimitriTedom",
     title: "Snowdev NextJs Template",
-    description:
-      "",
+    description: "",
     images: ["https://snow-dev-portfolio-mu.vercel.app/og-image.png"],
   },
   robots: {
@@ -59,14 +63,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`font-nexa text-prima`}
-      >
-        <ThemeProvider attribute={"class"} defaultTheme="system" enableSystem>
-        {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`font-nexa text-prima`}>
+          <ThemeProvider attribute={"class"} defaultTheme="system" enableSystem>
+            <NuqsAdapter>{children}</NuqsAdapter>
+            <Toaster />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

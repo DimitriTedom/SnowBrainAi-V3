@@ -61,7 +61,7 @@ const SidebarFooterContent = ({
                     <h4 className="font-semibold leading-none text-sm pl-1 mb-1">
                         Account
                     </h4>
-                    <Button variant={"ghost"} className="w-full justify-normal border border-tertiar hover:bg-tertiar text-sm pl-1 ring-0">
+                    <Button variant={"ghost"} className="w-full justify-normal border border-tertiar hover:bg-tertiar text-sm pl-1 ring-0" onClick={onSignOut}>
                         <LogOutIcon className="w-4 h-4"/>Sign Out
                     </Button>
                 </div>

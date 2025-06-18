@@ -1,10 +1,14 @@
+"use client"
 import { TrendingUp } from "lucide-react";
 import ThemeTrigger from "./ThemeTrigger";
-import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { useSignInModal } from "@/hooks/use-signin-modal";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { Button} from "./ui/button";
 
 export default function Navbar() {
+  const { open } = useSignInModal();
   return (
     <>
       <nav className="flex flex-between px-[2rem] xl:px-[5rem] py-4 shadow-sm">
@@ -21,13 +25,17 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           {/* Theme Toggle Button */}
           <ThemeTrigger />
-          {/* Get Started Button */}
-          <Button
-            onClick={() => {}}
-            className="px-4 flex py-3 rounded-full text-sm font-bold hover:-translate-y-1 transition"
-          >
-            <h2>Try SnowBrain</h2> <TrendingUp />
-          </Button>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <Button
+              onClick={open}
+              className="px-4 flex py-3 rounded-full text-sm font-bold hover:-translate-y-1 transition"
+            >
+              <h2>Try SnowBrain</h2> <TrendingUp />
+            </Button>
+          </SignedOut>
         </div>
       </nav>
     </>
